@@ -1,0 +1,13 @@
+<div class="other-posts" >
+  <% @posts.each do |post| %>
+    <a href="/<%= @blog.url %>/<%= post.url %>" class="box">
+      <div class="link" style="background-image: url('/images/posts/<%= post.id %>/<%= post.images.first.file %>');">
+          <div class="content">
+              <span class="title"><%= post.title %></span>
+              <br>
+              <span><%= post.date %></span>
+          </div>
+      </div>
+    </a>
+  <% end %>
+</div>

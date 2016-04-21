@@ -28,19 +28,7 @@
 
     <h3>Autres journées</h3>
 
-    <div class="other-posts" >
-      <% @posts.each do |post| %>
-        <a href="#" class="box">
-          <div class="link" style="background-image: url('/images/posts/<%= post.id %>/<%= post.images.first.file %>');">
-              <div class="content">
-                  <span class="title"><%= post.title %></span>
-                  <br>
-                  <span><%= post.date %></span>
-              </div>
-          </div>
-        </a>
-      <% end %>
-    </div>
+    <%= erb :other_posts %>
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 307.9 409.2" fill="#1F9400">
 

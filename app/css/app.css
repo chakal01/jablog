@@ -8,7 +8,9 @@ html, body{
     height: 100px;
     margin: 0px;
     text-align: center;
-    color: #99ED83;
+    color: #b7f3A8;
+    position: absolute;
+    z-index: 1000;
 }
 .header>h1{
     width: 800px;
@@ -24,11 +26,15 @@ html, body{
 #content{
     max-width: 800px;
     margin: auto;
-    padding-top: 50px;
+    padding-top: 130px;
     background-color: #fff;
     min-height: 100%;
     position: relative;
 }
+#content>h2{
+    z-index: 10;
+}
+
 svg{
     position: absolute;
     top: 0px;
@@ -84,14 +90,23 @@ h2{
 #blog_content{
     padding: 70px;
     font-size: 16px;
+    z-index: 10;
 }
 .carousel{
     margin-top: 30px;
     margin-bottom: 60px;
-    max-height: 400px;
+}
+.carousel-inner{
+    text-align: center;
 }
 img.img-sized {
   width: auto;
-  height: 400px;
-  max-height: 400px;
+  height: 350px;
+  max-height: 350px;
+  min-height: 350px;
+}
+#welcome{
+    font-size: 18px;
+    padding: 70px;
+    padding-top: 100px;
 }
