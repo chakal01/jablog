@@ -1,0 +1,9 @@
+#blog
+
+<h1>Posts</h1>
+
+<% @posts.each do |post| %>
+  <p>
+  <a href="/<%= @blog.url %>/<%= post.url %>"><%= post.title %></a>
+</p>
+<% end %>
