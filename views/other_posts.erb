@@ -1,6 +1,7 @@
-<div class="other-posts" >
+<div class="other-posts row" >
   <% @posts.each do |post| %>
-    <a href="/<%= @blog.url %>/<%= post.url %>" class="box">
+    <div class="col-sm-4 text-align-center">
+    <a href="/<%= @blog.url %>/<%= post.url %>">
       <div class="link" style="background-image: url('/images/posts/<%= post.id %>/<%= post.images.first.file %>');">
           <div class="content">
               <span class="title"><%= post.title %></span>
@@ -9,5 +10,6 @@
           </div>
       </div>
     </a>
+    </div>
   <% end %>
 </div>
