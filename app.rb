@@ -79,7 +79,6 @@ class App < Sinatra::Base
 
   get '/:blog_id/:post_id' do
     @blog = Blog.find_by(url: params[:blog_id])
-    @img_folder = settings.images_folder
     redirect '/' if @blog.nil?
     @post = Post.find_by(url: params[:post_id])
     @title = @blog.name
