@@ -3,8 +3,12 @@
 
   <div id="blog_content">
 
-    <%= h @post.content %>
+    <div class="col-sm-12">
+    <%= h @post.content.gsub("\n", "</br>") %> 
+    </div>
 
+<div class="col-sm-12">
+  
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -22,6 +26,7 @@
         <% end %>
       </div>
 
+    </div>
     </div>
 
     <hr>
