@@ -65,14 +65,14 @@ class App < Sinatra::Base
   end
 
   get '/' do
-    @title = "Les blogs des camps d'été"
+    @title = "Blogs JAB été 2016"
     erb :main
   end
   
   get '/:blog_id' do
     @blog = Blog.find_by(url: params[:blog_id])
     redirect '/' if @blog.nil?
-    @posts = @blog.posts
+    @posts = @blog.posts.includes(:images)
     @title = @blog.name
     erb :blog
   end
@@ -82,7 +82,7 @@ class App < Sinatra::Base
     redirect '/' if @blog.nil?
     @post = Post.find_by(url: params[:post_id])
     @title = @blog.name
-    @posts = @blog.posts
+    @posts = @blog.posts.where("id <> #{@post.id}").includes(:images)
     redirect "/#{@blog.id}" if @post.nil?
     erb :post
   end

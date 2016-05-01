@@ -1,8 +1,6 @@
 
-<h2></h2>
-
-<div id="blog_content">
-  <%= @blog.content %>
+<div class="with-padding">
+  <%= @blog.content.gsub("\n", "</br>") %>
 
   <h3>Toutes les journées</h3>
   <%= erb :other_posts %>

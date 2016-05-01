@@ -60,11 +60,11 @@ html, body{
     border-radius: 5px;
     position: relative;
     background-repeat: no-repeat;
+    background-size: cover;
     z-index: 10;
     text-align: center;
 }
 .other-posts{
-    /*width: 670px;*/
     margin: auto;
 }
 
@@ -98,14 +98,18 @@ h2{
     padding-left: 50px;
     font-size: 34px;
 }
-#blog_content{
+.with-padding{
     padding: 7%;
     padding-bottom: 30px;
     font-size: 16px;
+    text-align: justify;
     z-index: 10;
 }
-#blog_content > .col-sm-12{
-    text-align: justify;
+.with-padding-horizontal{
+    padding-left: 7%;
+}
+.branch-top{
+    border-top: 20px solid #6f3c0c;
 }
 .carousel{
     margin-top: 30px;
@@ -119,7 +123,7 @@ img.img-sized {
   max-height: 350px;
 }
 #welcome{
-    font-size: 18px;
+    font-size: 20px;
     padding: 70px;
     padding-top: 100px;
 }
