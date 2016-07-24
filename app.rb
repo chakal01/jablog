@@ -82,7 +82,7 @@ class App < Sinatra::Base
     redirect '/' if @blog.nil?
     @post = Post.find_by(url: params[:post_id])
     @title = @blog.name
-    @posts = @blog.posts.where("id <> #{@post.id}").includes(:images)
+    @posts = @blog.posts.where("id <> #{@post.id}").where(active: true).includes(:images)
     redirect "/#{@blog.id}" if @post.nil?
     @post.views = @post.views+1
     @post.save
