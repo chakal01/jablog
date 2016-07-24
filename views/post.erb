@@ -24,9 +24,11 @@
 
     </div>
 
-    <div class="with-padding-horizontal">
-      <h3>Autres journées</h3>
-    </div>
+    <% if @posts.length > 0 %>
+      <div class="with-padding-horizontal">
+        <h3>Autres journées</h3>
+      </div>
+    <% end %>
     
     <div class="with-padding">
       <%= erb :other_posts %>
