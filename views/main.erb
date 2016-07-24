@@ -1,3 +1,22 @@
 <div id="welcome">
-  Bienvenue sur le site des blogs des camps d'enfants ! 
+  Bienvenue sur le site des blogs des camps d'enfants !
+
+
+  <% @blogs.each do |blog| %>
+    <div class="col-sm-4 text-align-center">
+      <% post = blog.posts.where(active: true).first %>
+      <% unless post.nil? %>
+      <a href="/<%= blog.url %>">
+        <div class="link" style="background-image: url('/images/posts/<%= post.id %>/<%= post.images.first.file %>');">
+            <div class="content">
+                <span class="title"><%= blog.name %></span>
+                <br>
+            </div>
+        </div>
+      </a>
+      <% end %>
+    </div>
+  <% end %>
+
+
 </div>

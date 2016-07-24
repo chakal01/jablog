@@ -66,6 +66,7 @@ class App < Sinatra::Base
 
   get '/' do
     @title = "Blogs JAB été 2016"
+    @blogs = Blog.all
     erb :main
   end
   
