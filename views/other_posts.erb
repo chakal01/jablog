@@ -1,15 +1,17 @@
 <div class="other-posts row" >
   <% @posts.each do |post| %>
-    <div class="col-sm-4 text-align-center">
-    <a href="/<%= @blog.url %>/<%= post.url %>">
-      <div class="link" style="background-image: url('/images/posts/<%= post.id %>/<%= post.images.first.file %>');">
-          <div class="content">
-              <span class="title"><%= post.title %></span>
-              <br>
-              <span><%= post.date %></span>
-          </div>
+    <% if post.active && post.images.length > 0 %>
+      <div class="col-sm-4 text-align-center">
+      <a href="/<%= @blog.url %>/<%= post.url %>">
+        <div class="link" style="background-image: url('/images/posts/<%= post.id %>/<%= post.images.first.file %>');">
+            <div class="content">
+                <span class="title"><%= post.title %></span>
+                <br>
+                <span><%= post.date %></span>
+            </div>
+        </div>
+      </a>
       </div>
-    </a>
-    </div>
+    <% end %>
   <% end %>
 </div>

@@ -84,6 +84,8 @@ class App < Sinatra::Base
     @title = @blog.name
     @posts = @blog.posts.where("id <> #{@post.id}").includes(:images)
     redirect "/#{@blog.id}" if @post.nil?
+    @post.views = @post.views+1
+    @post.save
     erb :post
   end
 
