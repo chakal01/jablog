@@ -2,7 +2,7 @@
   <h2><%= @post.title %></h2>
 
   <div class="with-padding">
-    <%= h @post.content.gsub("\n", "</br>") %> 
+    <%= h @post.content.gsub("\n", "<br>") %>
   </div>
 
     <div id="carousel-example-generic" class="carousel slide with-padding" data-ride="carousel">
