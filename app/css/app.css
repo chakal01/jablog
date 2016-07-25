@@ -128,4 +128,7 @@ img.img-sized {
     padding: 70px;
     padding-top: 100px;
 }
+.caroussel-inner > .item > img {
+    display: inline-block;
+}
 .text-align-center{text-align: center;}
